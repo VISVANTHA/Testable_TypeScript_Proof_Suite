@@ -1,0 +1,11 @@
+tool: osv-scanner
+language: typescript
+language_version: "18-22"
+technique: "Vulnerability Scanning"
+target_files: [../../src/service.ts]
+run:
+  command: "osv-scanner ."
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified passing cleanly against src/service.ts"

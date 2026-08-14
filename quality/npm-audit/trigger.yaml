@@ -1,0 +1,11 @@
+tool: npm-audit
+language: typescript
+language_version: "18-22"
+technique: "Package Security Audit"
+target_files: [../../src/service.ts]
+run:
+  command: "npm audit"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified passing cleanly against src/service.ts"

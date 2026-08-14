@@ -1,0 +1,11 @@
+tool: fast-check
+language: typescript
+language_version: "18-22"
+technique: "Property-Based Testing"
+target_files: [../../src/service.ts]
+run:
+  command: "npm test"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified passing cleanly against src/service.ts"
