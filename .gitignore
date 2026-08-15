@@ -1,4 +1,5 @@
 node_modules/
-dist/
 .nyc_output/
-.stryker-tmp/
+dist/
+coverage/
+obj/

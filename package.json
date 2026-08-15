@@ -2,20 +2,25 @@
   "name": "testable-ts-proof",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "tsc",
-    "test": "mocha -r ts-node/register test/**/*.test.ts"
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "coverage": "nyc --reporter=cobertura mocha -r ts-node/register 'test/**/*.test.ts'"
   },
   "devDependencies": {
-    "typescript": "^5.5.4",
-    "ts-node": "^10.9.2",
-    "@types/node": "^20.14.12",
-    "@types/mocha": "^10.0.7",
-    "mocha": "^10.7.3",
-    "chai": "^4.5.0",
     "@types/chai": "^4.3.16",
-    "eslint": "^8.57.1",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.12",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0"
+    "chai": "^4.5.0",
+    "eslint": "^8.57.1",
+    "mocha": "^10.7.3",
+    "nyc": "^17.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
   }
 }
