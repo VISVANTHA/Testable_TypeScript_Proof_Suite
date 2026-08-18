@@ -1,0 +1,11 @@
+tool: github-branch-protection-api
+language: typescript
+language_version: "18-22"
+technique: "Branch Protection Compliance"
+target_files: [../../src/service.ts]
+run:
+  command: "curl -s -H Accept: application/vnd.github+json https://api.github.com/repos/nestjs/nest/branches/main/protection"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

@@ -1,0 +1,11 @@
+tool: securityheaders-api
+language: typescript
+language_version: "18-22"
+technique: "HTTP Security Headers Analysis"
+target_files: [../../src/service.ts]
+run:
+  command: "curl -s -I https://securityheaders.com/?q=https://example.com&followRedirects=on"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

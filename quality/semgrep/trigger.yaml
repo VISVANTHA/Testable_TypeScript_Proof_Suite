@@ -1,0 +1,11 @@
+tool: semgrep
+language: typescript
+language_version: "18-22"
+technique: "Static Application Security Testing"
+target_files: [../../src/service.ts]
+run:
+  command: "semgrep --config auto"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

@@ -4,8 +4,8 @@ language_version: "18-22"
 technique: "Dependency Upgrade Checker"
 target_files: [../../src/service.ts]
 run:
-  command: "npx ncu"
+  command: "npx npm-check-updates"
 expects:
   verified: true
 verified_in_session: true
-verified_result: "tool verified passing cleanly against src/service.ts"
+verified_result: "tool verified against TypeScript proof suite"

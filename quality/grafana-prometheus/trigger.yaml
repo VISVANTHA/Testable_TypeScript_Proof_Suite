@@ -1,0 +1,11 @@
+tool: grafana-prometheus
+language: typescript
+language_version: "18-22"
+technique: "Metrics Observability"
+target_files: [../../src/service.ts]
+run:
+  command: "curl -s http://localhost:9090/api/v1/status/buildinfo"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

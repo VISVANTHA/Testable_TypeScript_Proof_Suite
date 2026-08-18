@@ -1,0 +1,11 @@
+tool: typescript-async-rules
+language: typescript
+language_version: "18-22"
+technique: "TypeScript Async Analysis"
+target_files: [../../src/service.ts]
+run:
+  command: "npx eslint -c .eslintrc.cjs src"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

@@ -1,0 +1,25 @@
+{
+  "entry": [
+    "src/service.ts",
+    "scripts/**/*.mjs"
+  ],
+  "project": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "scripts/**/*.mjs"
+  ],
+  "ignore": [
+    "dist/**",
+    "coverage/**",
+    ".stryker-tmp/**"
+  ],
+  "ignoreDependencies": [
+    "@types/mocha",
+    "@types/chai",
+    "@types/node",
+    "mocha",
+    "nyc",
+    "chai",
+    "ts-node"
+  ]
+}

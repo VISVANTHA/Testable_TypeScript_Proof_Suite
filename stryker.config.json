@@ -1,0 +1,21 @@
+{
+  "testRunner": "mocha",
+  "mutate": [
+    "src/service.ts"
+  ],
+  "mochaOptions": {
+    "spec": [
+      "test/service.test.ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "coverageAnalysis": "off",
+  "timeoutMS": 60000,
+  "reporters": [
+    "clear-text",
+    "progress"
+  ],
+  "tempDirName": ".stryker-tmp"
+}

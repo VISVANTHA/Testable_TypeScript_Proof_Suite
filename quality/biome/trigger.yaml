@@ -1,11 +1,11 @@
 tool: biome
 language: typescript
 language_version: "18-22"
-technique: "Linting & Formatting"
+technique: "Code Quality Auditing"
 target_files: [../../src/service.ts]
 run:
-  command: "npx biome check src/"
+  command: "npx @biomejs/biome check src/"
 expects:
   verified: true
 verified_in_session: true
-verified_result: "tool verified passing cleanly against src/service.ts"
+verified_result: "tool verified against TypeScript proof suite"

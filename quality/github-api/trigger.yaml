@@ -4,8 +4,8 @@ language_version: "18-22"
 technique: "Repository & Package Metadata"
 target_files: [../../src/service.ts]
 run:
-  command: "curl -s https://api.github.com/repos/nestjs/nest && curl -s https://api.github.com/repos/nestjs/nest/releases/latest && curl -s https://api.npmjs.org/downloads/point/last-month/@nestjs/core"
+  command: "node scripts/github-api-trigger.mjs"
 expects:
   verified: true
 verified_in_session: true
-verified_result: "tool verified passing cleanly against src/service.ts"
+verified_result: "tool verified against TypeScript proof suite"

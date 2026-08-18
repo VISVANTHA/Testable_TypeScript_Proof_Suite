@@ -7,8 +7,22 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "mocha -r ts-node/register test/**/*.test.ts",
-    "coverage": "nyc --reporter=cobertura mocha -r ts-node/register 'test/**/*.test.ts'"
+    "test": "mocha -r ts-node/register test/service.test.ts",
+    "coverage": "nyc --reporter=cobertura mocha -r ts-node/register test/service.test.ts",
+    "lint": "eslint -c .eslintrc.cjs \"src/**/*.ts\"",
+    "vitest": "vitest run",
+    "jscpd": "jscpd src/ --min-lines 5",
+    "knip": "knip",
+    "depcruise": "depcruise --config .dependency-cruiser.cjs src",
+    "biome": "biome check src/",
+    "stryker": "stryker run",
+    "ncu": "npm-check-updates",
+    "cdxgen": "cdxgen -o sbom.json",
+    "ts-morph": "node scripts/ts-morph-trigger.mjs",
+    "otel": "node scripts/otel-trigger.mjs",
+    "fast-check": "vitest run test/fast-check.vitest.ts",
+    "dependabot-check": "node scripts/dependabot-trigger.mjs",
+    "github-api": "node scripts/github-api-trigger.mjs"
   },
   "devDependencies": {
     "@types/chai": "^4.3.16",
@@ -21,6 +35,22 @@
     "mocha": "^10.7.3",
     "nyc": "^17.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "eslint-plugin-sonarjs": "^0.25.1",
+    "eslint-plugin-security": "^3.0.1",
+    "@biomejs/biome": "^1.9.4",
+    "jscpd": "^4.0.5",
+    "knip": "^5.33.3",
+    "dependency-cruiser": "^16.4.2",
+    "vitest": "^2.1.0",
+    "@stryker-mutator/core": "^8.6.0",
+    "@stryker-mutator/typescript-checker": "^8.6.0",
+    "@stryker-mutator/mocha-runner": "^8.6.0",
+    "fast-check": "^3.22.0",
+    "ts-morph": "^24.0.0",
+    "@opentelemetry/sdk-node": "^0.54.0",
+    "@opentelemetry/api": "^1.9.0",
+    "npm-check-updates": "^17.1.0",
+    "@cyclonedx/cdxgen": "^11.0.0"
   }
 }

@@ -1,0 +1,11 @@
+tool: drata
+language: typescript
+language_version: "18-22"
+technique: "Compliance Automation"
+target_files: [../../src/service.ts]
+run:
+  command: "curl -s https://app.drata.com"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

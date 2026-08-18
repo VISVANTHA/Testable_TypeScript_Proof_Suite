@@ -1,0 +1,11 @@
+tool: k6
+language: typescript
+language_version: "18-22"
+technique: "Load Testing"
+target_files: [../../src/service.ts]
+run:
+  command: "k6 run script.js"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

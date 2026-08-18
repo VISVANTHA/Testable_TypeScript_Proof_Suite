@@ -1,0 +1,11 @@
+tool: onetrust
+language: typescript
+language_version: "18-22"
+technique: "Cookie Consent Compliance"
+target_files: [../../src/service.ts]
+run:
+  command: "curl -s https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

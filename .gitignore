@@ -3,3 +3,11 @@ node_modules/
 dist/
 coverage/
 obj/
+.stryker-tmp/
+reports/
+sbom.json
+ort-sbom.json
+jscpd-report/
+.eslintcache
+VERIFY_RESULTS.txt
+LISTING.txt

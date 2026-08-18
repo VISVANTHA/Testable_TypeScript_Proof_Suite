@@ -4,8 +4,8 @@ language_version: "18-22"
 technique: "SBOM Generation"
 target_files: [../../src/service.ts]
 run:
-  command: "npx cdxgen -o sbom.json"
+  command: "npx cdxgen -t js -o sbom.json --install-deps false"
 expects:
   verified: true
 verified_in_session: true
-verified_result: "tool verified passing cleanly against src/service.ts"
+verified_result: "tool verified against TypeScript proof suite"

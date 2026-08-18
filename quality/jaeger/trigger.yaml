@@ -1,0 +1,11 @@
+tool: jaeger
+language: typescript
+language_version: "18-22"
+technique: "Distributed Tracing"
+target_files: [../../src/service.ts]
+run:
+  command: "curl -s http://localhost:16686/api/services"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

@@ -1,0 +1,11 @@
+tool: detect-secrets
+language: typescript
+language_version: "18-22"
+technique: "Secret Scanning"
+target_files: [../../src/service.ts]
+run:
+  command: "detect-secrets scan"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

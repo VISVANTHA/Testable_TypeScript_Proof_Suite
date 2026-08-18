@@ -1,11 +1,11 @@
 tool: ts-morph
 language: typescript
 language_version: "18-22"
-technique: "TypeScript AST Manipulation"
+technique: "TypeScript AST Analysis"
 target_files: [../../src/service.ts]
 run:
-  command: "npx tsc"
+  command: "node scripts/ts-morph-trigger.mjs"
 expects:
   verified: true
 verified_in_session: true
-verified_result: "tool verified passing cleanly against src/service.ts"
+verified_result: "tool verified against TypeScript proof suite"

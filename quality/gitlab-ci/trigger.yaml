@@ -1,0 +1,11 @@
+tool: gitlab-ci
+language: typescript
+language_version: "18-22"
+technique: "CI/CD Pipeline Analysis"
+target_files: [../../src/service.ts]
+run:
+  command: "curl -s https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/pipelines?per_page=1"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"

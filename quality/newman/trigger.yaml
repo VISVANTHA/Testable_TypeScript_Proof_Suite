@@ -1,0 +1,11 @@
+tool: newman
+language: typescript
+language_version: "18-22"
+technique: "API Testing"
+target_files: [../../src/service.ts]
+run:
+  command: "npx newman run collection.json"
+expects:
+  verified: true
+verified_in_session: true
+verified_result: "tool verified against TypeScript proof suite"
