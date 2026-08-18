@@ -1,10 +1,10 @@
-tool: pydriller
+tool: typescript-ast-rules
 language: typescript
 language_version: "18-22"
-technique: "Repository History Mining"
+technique: "TypeScript AST Analysis"
 target_files: [../../src/service.ts]
 run:
-  command: "python -c \"from pydriller import Repository; print(sum(1 for _ in Repository('.').traverse_commits()))\""
+  command: "node scripts/ts-morph-trigger.mjs"
 expects:
   verified: true
 verified_in_session: true
